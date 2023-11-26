@@ -1,0 +1,558 @@
+ DS All Slips Solution
+
+Slip-1
+-------------------------------------------------------------------
+Q1)
+import pandas as pd
+import matplotlib.pyplot as plt
+iris=pd.read_csv(“iris.csv”)
+ax=plt.subplots(1,1,figsize=(10,8))
+iris[‘Species’].volue_counts().plot.pie(explode=[0.1,0.1,0.1],autopct=’%5.1f%%’
+,shadow=True,figsize=(5,8))
+plt.title(“Iris Species %”)
+plt.show()
+Q2)
+Import numpy as np
+Import pandas as pd
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+Print(‘satistical detils of data frame’)
+Print(df.describe())
+
+Slip-2
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+Print(data.fillna(data.mean(2))
+Q2)
+ import matplotlib.pyplot as plt
+name=[‘xyz’,’pqr’,’abc’]
+sal=[10000,15000,5000]
+plt.plot(name,sal,color=’Blue’)
+plt.xlabel(‘name’,color=”green”)
+plt.ylabel(‘sal’,color=”Red”)
+plt.show()
+Q3)
+import pandas as pd
+data=pd.read_csv(“/home/pc256/tybcs-(sem-1)DS/weight-height.csv”)
+print(“\n first 10 rows”)
+print(data.head(10))
+print(“\n last 10 rows”)
+print(data.tail(10))
+print(“\n random 20 rows”)
+print(data.sample(20))
+
+slip-3
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+data=pd.read_csv(“iris.csv”)
+plt.figure(figsize=(10,7))
+new_data=data[“SepalLengthCm”,”SepalwidthCm”,
+”PetalLengthCm”PetalWidthCm”]
+ new_data.boxplot()
+plt.show()
+Q2)
+import numy as np
+import pandas as pd
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/ weight-height.csv’)
+print(‘Statistical detail of data frame’)
+print(df.describe())
+slip-4
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+Q2)
+import numy as np
+ import pandas as pd
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/ User_data.csv’)
+print(‘shape of csv’)
+print(df.shape)
+print(‘data types’)
+print(df.dtypes)
+print(‘description of csv’)
+print(df.describe())
+slip-7
+---------------------------------------------------------------------------------
+Q1)
+a)
+import numy as np
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+df2=pd.DataFrame(data)
+onc=OneHotEncoder(handel_unknown=’ignore’)
+enc_df=pd.DataFrame(enc.fit transform(df2[[‘country’]]).toarray())
+print(enc_df)
+b)
+import pandas as pd
+from sklearn.preprocessing import label Encoder
+import numy as np
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+ df2=pd.DataFrame(data)
+labelencoder=LabelEncoder()
+df2[‘purchased']=labelencoder.fit_transform(df2[“purchased”])
+print(enc_df2)
+slip-8
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+data_sacler=preprocessing.standardScaler()
+data_sacled=data_scalar.fit_transform(df)
+print(data_scaled)
+slip-10
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+data=pd.read_csv(“/home/pc Ds/ weight-height.csv”)
+mean_data=data[“sepalLengthCm’].mean()
+median_data=data[“sepalLengthCm”].median()
+print(“\n Mean of sepal length: ”,mean_data.”\n Median of sepal length:
+“,median_data)
+mean_data=data[“sepalwidthCm”].median()
+print(“\n Mean of sepal width: ”,mean_data.”\n Median of sepal width:
+“,median_data)
+mean_data=data[“petalLengthCm’].mean()
+ median_data=data[“petalLengthCm’].median()
+print(“\n Mean of petal length: ”,mean_data.”\n Median of petal length:
+“,median_data)
+mean_data=data[“petalwidthCm’].mean()
+mean_data=data[“petalwidthCm’].median()
+print(“\n Mean of petal _width: ”,mean_data.”\n Median of petal_width:
+“,median_data)
+Q2)
+A=[1,2,3]
+B=[5,3,2]
+dis=0
+for i in range(len (A)):
+dis+=abs(A[i]-B[i])
+print(“first Array is: “,A)
+print(“second Array is: “,B)
+print(“manhattan distance is: “,dis)
+slip-12
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+ plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+Q2)
+import pandas as pd
+df=pd.DataFrame(column=[‘Name’,’Salary’,’Department’])
+df.loc[0]=[‘mansi’,None,’IT’]
+df.loc[1]=[‘mansi’,60000’IT’]
+df.loc[2]=[‘mansi’,60000’IT’]
+df.loc[3]=[‘mansi’,60000,None]
+df.loc[4]=[‘mansi’,60000’IT’]
+df.loc[5]=[‘mansi’,60000’IT’]
+df.loc[6]=[‘mansi’,60000’IT’]
+df.loc[7]=[‘mansi’,60000’IT’]
+df.loc[8]=[‘mansi’,60000’IT’]
+df.loc[9]=[‘mansi’,60000’IT’]
+print(df.dropna())
+slip-13
+Q1)
+import pandas as pd
+import numy as np
+import matplotlib.pyplot as plt
+iris=pd.read_csv(“/home/pc256/tybcs/Assignment/iris.csv”)
+ fig=iris[iris.species=’Iris
+setosa’].plot.scatter(x=’PetalLengthCm’,y=’PetalWidthCm’,color=’orange’,label
+=’setosa’)
+iris[iris.species==’Iris
+versicolor’].plot.scatter(x=’PetalLengthCm’,y=’PetalWidthCm’,color=’blue’,labe
+l=’versicolor’,ax=fig)
+iris[iris.species==’Iris
+virginica’].plot.scatter(x=’PetalLengthCm’,y=’PetalWidthCm’,color=’green’,label
+=’virginica’,ax=fig)
+fig.set_xlabel(“Petal Length”)
+fig.set_ylabel(“Petal width”)
+fig.set_title(“petal Length vs Width”)
+fig.=plt.gcf()
+fig.set_size_inches(12,8)
+plt.show()
+Q2)
+import numy as np
+a=np.arange(4).reshape((2,2))
+print(“original flattened array: “)
+print(a)
+print(“ Maximum value of the above flattened array:”)
+print(np.amax(a))
+print(“Minimum value of the above flattened array :”)
+print(np.amin(a))
+slip-15
+---------------------------------------------------------------------------------
+Q1)
+ import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+Q2)
+import numy as np
+import matplotlib.pyplot as plt
+s_name=[‘OS’,’DS’,’PHP’]
+marks=[40,50,70]
+plt.bar(s_name.marks)
+plt.show()
+slip-16
+------------------------------------------------------------------------------
+Q1)
+import numy as np
+import matplotlib.pyplot as plt
+s_name=[‘OS’,’DS’,’PHP’]
+marks=[40,50,70]
+plt.bar(s_name.marks)
+ plt.show()
+Q2)
+import pandas as pd
+df=pd.DataFrame({‘Name’:[‘pratham’,’ganesh’,’deepak’,’mansi’],
+‘Per’:[98,85,92,72],
+‘Age’:[21,20,23,20]})
+print(“ Average of graduation percentage:”,df[‘per’].mean())
+print(“Average of age of student:”,df[‘Age’].mean())
+Slip-17
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn . preprocessing
+iris=pd.read_csv(“iris_csv”)
+iris=iris.drop(‘ID’,axis=1)
+le=preprocessing.LabelEnoder()
+iris.species=le.fit_transform(iris.species)
+x=iris.iloc[:,:-1].values
+y=iris.iloc[:,4].values
+plt.Scatter(x[:,0],x[:,3],c=y,cmap=’flag’)
+plt.xlabel(‘sepal length cm’)
+plt.ylabel(‘petal width cm’)
+plt.show()
+ Q2)
+import pandas as pd
+df=pd.DataFrame(colums=[‘name’,’age’,’sal’,’dept’])
+df.loc[0]=[‘rohit’,21,10000,’computer’]
+df.loc[1]=[‘deepak’,25,11000,’medical’]
+df.loc[2]=[‘xyz’,30,20000,’IT’]
+df.loc[3]=[‘pqr’,35,30000,’arts’]
+print(df)
+slip-18
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+data=pd.read_csv(“iris.csv”)
+plt.figure(figsize=(10,7))
+new_data=data[“SepalLengthCm”,”SepalwidthCm”,
+”PetalLengthCm”PetalWidthCm”]
+new_data.boxplot()
+plt.show()
+Q2)
+import pandas as pd
+data=pd.read_csv(“/home/pc256/tybcs-(sem-1)DS/weight-height.csv”)
+print(“\n first 5 rows “)
+print(data.head(10))
+print(“\n last 5 rows”)
+ print(data.tail(5))
+print(“\n random 10 rows”)
+print(data.sample(10))
+slip-19
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+df=pd.DataFrame(colums=[‘name’,’age’,’per’])
+df.loc[0]=[‘rohit’,5,85]
+df.loc[1]=[‘deepak’,10,75]
+df.loc[2]=[‘xyz’,20,2019]
+df.loc[3]=[‘pqr’,30,205]
+print(df)
+Q2)
+import numy as np
+import pandas as pd
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/ User_data.csv’)
+print(‘shape of csv’)
+print(df.shape)
+print(‘data types’)
+print(df.dtypes)
+print(‘description of csv’)
+print(df.describe())
+Q3)
+import pandas as pd
+df=pd.DataFrame(colums=[‘name’,’age’,’per’])
+ df.loc[0]=[‘rohit’,5,85]
+df.loc[1]=[‘deepak’,10,75]
+df.loc[5]=[None,None,None]
+df.loc[3]=[‘pqr’,30,205]
+print(df)
+df[“remark’]=None
+print(df)
+slip-20
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+Q2)
+import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+plt.boxplot(x.vert=False)
+ plt.show()
+slip-21
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+iris=pd.read_csv(‘/home/pc256/Iris.csv’)
+ax=plt.subplots(1,1,figsize=(10,8))
+sns.countplot(‘species’,data=iris)
+plt.title(“Iris species count”)
+plt.show()
+Q2)
+import numy as np
+import matplotlib.pyplot as plt
+iris=pd.read_csv(“Iris.csv”)
+plt.hist(‘species’,data=iris)
+plt.show()
+slip-22
+---------------------------------------------------------------------------------
+Q1) a)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+data_sacler=preprocessing.MinMaxScaler(feature_range=(0,1))
+ data_sacled=data_scalar.fit_transform(df)
+print(data_scaled.round(2))
+b)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+data_sacler=preprocessing.standardScaler()
+data_sacled=data_scalar.fit_transform(df)
+print(data_scaled)
+c)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+dn=preprocessing.normalize(df,norm=’l1’)
+print(“\n L1 Normalized Data”)
+print(“--------------------------“)
+print(dn.round(2))
+slip-23
+---------------------------------------------------------------------------------
+Q1) a)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+data_sacler=preprocessing.MinMaxScaler(feature_range=(0,1))
+data_sacled=data_scalar.fit_transform(df)
+print(data_scaled.round(2)
+ b)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+data_sacler=preprocessing.standardScaler()
+data_sacled=data_scalar.fit_transform(df)
+print(data_scaled)
+c)
+import pandas as pd
+from sklearn.preprocessing
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/winequality-red.csv’)
+data_binarized=preprocessing.Binarizer(threshold=s).transform(df)
+print(“\n Binarized Data”)
+print(“--------------------------“)
+print(data_binarized)
+slip-24
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+iris=pd.read_csv(‘/home/pc256/Iris.csv’)
+ax=plt.subplots(1,1,figsize=(10,8))
+sns.countplot(‘species’,data=iris)
+plt.title(“Iris species count”)
+plt.show()
+ Q2)
+import numy as np
+import matplotlib.pyplot as plt
+iris=pd.read_csv(“Iris.csv”)
+plt.hist(‘species’,data=iris)
+plt.show()
+slip-25
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+Q2)
+import numy as np
+import matplotlib.pyplot as plt
+s_name=[‘OS’,’DS’,’PHP’]
+marks=[40,50,70]
+plt.pie(s_name,labels=marks)
+ plt.show()
+slip-26
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+Q2)
+import numy as np
+import matplotlib.pyplot as plt
+s_name=[‘OS’,’DS’,’PHP’]
+marks=[40,50,70]
+plt.bar(s_name.marks)
+plt.show()
+slip-27
+---------------------------------------------------------------------------------
+Q1) a)
+ import numy as np
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+df2=pd.DataFrame(data)
+onc=OneHotEncoder(handel_unknown=’ignore’)
+enc_df=pd.DataFrame(enc.fit transform(df2[[‘country’]]).toarray())
+print(enc_df)
+b)
+import pandas as pd
+from sklearn.preprocessing import label Encoder
+import numy as np
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+df2=pd.DataFrame(data)
+labelencoder=LabelEncoder()
+df2[‘purchased']=labelencoder.fit_transform(df2[“purchased”])
+print(enc_df2)
+slip-28
+---------------------------------------------------------------------------------
+Q1)
+import pandas as pd
+df=pd.DataFrame(colums=[‘name’,’age’,’per’])
+df.loc[0]=[‘rohit’,5,85]
+df.loc[1]=[‘deepak’,10,75]
+df.loc[2]=[‘xyz’,20,2019]
+df.loc[3]=[‘pqr’,30,205]
+ print(df)
+Q2)
+import numy as np
+import pandas as pd
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/ Iris.csv’)
+print(‘shape of csv’)
+print(df.shape)
+print(‘data types’)
+print(df.dtypes)
+print(‘description of csv’)
+print(df.describe())
+Q3)
+import numy as np
+import pandas as pd
+df=pd.read_csv(‘/home/pc256/tybcs-(sem-1)DS/ Iris.csv’)
+print(‘Statistical details of the data frame’)
+print(df.describe())
+Q4)
+import pandas as pd
+df=pd.DataFrame(colums=[‘name’,’age’,’per’])
+df.loc[0]=[‘rohit’,5,85]
+df.loc[1]=[‘deepak’,10,75]
+df.loc[5]=[None,None,None]
+df.loc[3]=[‘pqr’,30,205]
+print(df)
+df[“remark’]=None
+ print(df)
+slip-29
+---------------------------------------------------------------------------------
+Q1)
+import numy as np
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+df2=pd.DataFrame(data)
+onc=OneHotEncoder(handel_unknown=’ignore’)
+enc_df=pd.DataFrame(enc.fit transform(df2[[‘country’]]).toarray())
+print(enc_df)
+2)
+import pandas as pd
+from sklearn.preprocessing import label Encoder
+import numy as np
+data=pd.read_csv(“/home/pc256/TYBCS(sem1)Ds/Assignment 3/Data1.csv”)
+df2=pd.DataFrame(data)
+labelencoder=LabelEncoder()
+df2[‘purchased']=labelencoder.fit_transform(df2[“purchased”])
+print(enc_df2)
+slip-30
+---------------------------------------------------------------------------------
+a)
+import numy as np
+ import matplotlib.pyplot as plt
+x=np.random.randn(50)
+y=np.rndom.randn(50)
+plt.plot(x,y)
+plt.scatter(x,y)
+plt.hist(x)
+plt.boxplot(x,vert=True)
+plt.show()
+plt.scatter(x,y,s=110,c=’red’,marker=’*’)
+plt.hist(x,facecolor=’y’,linewidth=2,edgecolor=’k’)
+b)
+import numy as np
+import matplotlib.pyplot as plt
+s_name=[‘OS’,’DS’,’PHP’]
+marks=[40,50,70]
+plt.bar(s_name.marks)
+plt.show()
+Downloaded by Bhati Family (bhatifamily18@gmail.com)
+lOMoARcPSD|29213919
